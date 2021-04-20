@@ -106,7 +106,7 @@ class Data_spiral:
         plt.figure()
         plt.figure(figsize=(5,5), dpi=600)
         plt.scatter(
-        self.x_data[:,0], self.x_data[:,1], color='k')
+        self.x_data[:,0], self.x_data[:,1], c=self.y_data, cmap='RdBu')
         plt.title('Binary spiral dataset in 2d')
         plt.show()
 
