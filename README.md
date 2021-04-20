@@ -1,7 +1,7 @@
 
 The following repository is a tool developed for a Bachelor thesis titled "Mathematical properties of neural networks trained on artificial datasets" by Natalia Ślusarz (Heriot Watt Univerity) which can also be found among the files to provide context for the experiments and can be read to see already achieved results.
 
-This tool is centered around experiments involving an artificial dataset in the form of a double Archimedean spiral, complexity of which can be controlled by paramters (mathematical definitions of which can be found in the thesis) and multi-layer feedforward neural networks (NNs) trained on this dataset. Its main aim is to provide methods that allow for analysis of various parameters of the NN in order to analyse its learning process.
+This tool is centred around experiments involving an artificial dataset in the form of a double Archimedean spiral, complexity of which can be controlled by parameters (mathematical definitions of which can be found in the thesis) and multi-layer feedforward neural networks (NNs) trained on this dataset. Its main aim is to provide methods that allow for analysis of various parameters of the NN in order to analyse its learning process.
 
 <p align="center">
 <img src="https://github.com/ndslusarz/Slusarz_BSc_thesis/blob/main/images/spiral_1.png"  height="250" />
@@ -9,7 +9,7 @@ This tool is centered around experiments involving an artificial dataset in the 
 
 ## Installation
 
-To use this tool simply clone this reporitory and open the code files in your preferred `Python 3.7.0` editor.
+To use this tool simply clone this repository and open the code files in your preferred `Python 3.7.0` editor.
 
 Do make sure to have the following libraries installed:
 - `matplotlib                3.3.2`
@@ -33,14 +33,15 @@ Let us now explore the files provided with this tool as well as the provided fun
 
 ### 1. spiral
 
-This file includes the class implementing the dataset - double Archimedean spiral, an example of which can be seen above. Its shape can be controlled by providing the radius as well as max_phi (a proxy of entanglement, a maxiumum angle at which the spiral will stop).
-It also has a method allowing for adding random noise to the datset for purposes of testing.
+This file includes the class implementing the dataset - double Archimedean spiral, an example of which can be seen above. Its shape can be controlled by providing the radius as well as max_phi (a proxy of entanglement, a maximum angle at which the spiral will stop). 
+
+It also has a method allowing for adding random noise to the dataset for purposes of testing.
 
 ### 2. nn_class
 
-This is the file containg the main implementation of the neural network which is a ultilayer, feed-forward NN with user having control over the number and size of layers.
-Currently the network has a choice of activation function for inner layers - tanh and ReLU - although more PyTorch functions can be easily added. Softmax was used in the final layer. 
-Parameters such as number of epochs, batch size and optimiser can also be specifed. The network takes data in the form of numpy arrays and converst them to PyTorch tensors internally to allow for more flexibility with input data.
+This is the file containing the main implementation of the neural network which is a multilayer, feed-forward NN with user having control over the number and size of layers. Currently the network has a choice of activation function for inner layers - tanh and ReLU - although more PyTorch functions can be easily added. Softmax was used in the final layer. 
+
+Parameters such as number of epochs, batch size and optimiser can also be specified. The network takes data in the form of numpy arrays and convert them to PyTorch tensors internally to allow for more flexibility with input data. 
 
 This class contains majority of functions involving gathering raw data from the network - its weight matrix for different layers and epochs of training, visualisation of decision boundary (an example of which can be seen below), as well as a way to check whether there exists a vanishing gradient problem.
 
@@ -60,7 +61,7 @@ It also provides information of th Euclidean distance between the final position
 
 It does not however provide methods for generating adversarial examples. 
 
-It has been created as a separate class as for the purposes of point mapping it takes care to keep track of order of the data throught the training process hence has an addutional paramter that could cause unpredictable behaviour for some nn_class functions and was not needed for the purposes of other experiments.
+It has been created as a separate class as for the purposes of point mapping it takes care to keep track of order of the data throughout the training process hence has an additional parameter that could cause unpredictable behaviour for some nn_class functions and was not needed for the purposes of other experiments.
 
 ### 4. eigenvalues_functions
 
@@ -68,7 +69,7 @@ This is a collection of methods used for extraction and analysis of data from we
 
 These include extraction of Frobenius norm, eigenvalues, number of complex eigenvalues and norms of eigenvalues for various layers of the NNs from nn_class.
 
-An overreaching function is provided that integrates most of the avilable functionalites, giving a comparison of Frobenius norm as well as eigenvalues for all layers at the end of training. This provides a good starting point that can be modified to facilitate other experiments.
+An overreaching function is provided that integrates most of the available functionalities, giving a comparison of Frobenius norm as well as eigenvalues for all layers at the end of training. This provides a good starting point that can be modified to facilitate other experiments.
 
 For example below are the values of Frobenius norm for various layers of the NN (for both tanh and ReLU) at the end of training depending on the complexity of the dataset.
 
