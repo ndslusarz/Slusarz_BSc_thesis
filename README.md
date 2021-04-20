@@ -1,6 +1,10 @@
 # Slusarz_BSc_thesis
 The following repository is a tool during a Bachelor thesis titled "Mathematical properties of neural networks trained on artificial datasets" by Natalia Ślusarz which can also be found among the files to provide context for the experiments and can be read to see already achieved results.
 
+<p align="center">
+<img src="https://github.com/ndslusarz/Slusarz_BSc_thesis/blob/main/images/spiral_1.png" width="300" height="300" />
+</p>
+
 This tool is centered around experiments involving an artificial dataset in the form of a double Archimedean spiral, complexity of which can be controlled by paramters (mathematical definitions of which can be found in the thesis) and multi-layer feedforward neural networks (NNs) trained on this dataset. Its main aim is to provide methods that allow for analysis of various parameters of the NN in order to analyse its learning process.
 
 ## Installation
