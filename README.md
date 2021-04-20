@@ -1,11 +1,11 @@
 # Slusarz_BSc_thesis
-The following repository is a tool during a Bachelor thesis titled "Mathematical properties of neural networks trained on artificial datasets" by Natalia Ślusarz which can also be found among the files to provide context for the experiments and can be read to see already achieved results.
+The following repository is a tool developed for a Bachelor thesis titled "Mathematical properties of neural networks trained on artificial datasets" by Natalia Ślusarz (Heriot Watt Univerity) which can also be found among the files to provide context for the experiments and can be read to see already achieved results.
+
+This tool is centered around experiments involving an artificial dataset in the form of a double Archimedean spiral, complexity of which can be controlled by paramters (mathematical definitions of which can be found in the thesis) and multi-layer feedforward neural networks (NNs) trained on this dataset. Its main aim is to provide methods that allow for analysis of various parameters of the NN in order to analyse its learning process.
 
 <p align="center">
 <img src="https://github.com/ndslusarz/Slusarz_BSc_thesis/blob/main/images/spiral_1.png" width="300" height="300" />
 </p>
-
-This tool is centered around experiments involving an artificial dataset in the form of a double Archimedean spiral, complexity of which can be controlled by paramters (mathematical definitions of which can be found in the thesis) and multi-layer feedforward neural networks (NNs) trained on this dataset. Its main aim is to provide methods that allow for analysis of various parameters of the NN in order to analyse its learning process.
 
 ## Installation
 
@@ -33,7 +33,7 @@ Let us now explore the files provided with this tool as well as the provided fun
 
 ### 1. spiral
 
-This file includes the class implementing the dataset - double Archimedean spiral. Its shape can be controlled by providing the radius as well as max_phi (a proxy of entanglement, a maxiumum angle at which the spiral will stop).
+This file includes the class implementing the dataset - double Archimedean spiral, an example of which can be seen above. Its shape can be controlled by providing the radius as well as max_phi (a proxy of entanglement, a maxiumum angle at which the spiral will stop).
 It also has a method allowing for adding random noise to the datset for purposes of testing.
 
 ### 2. nn_class
@@ -42,7 +42,7 @@ This is the file containg the main implementation of the neural network which is
 Currently the network has a choice of activation function for inner layers - tanh and ReLU - although more PyTorch functions can be easily added. Softmax was used in the final layer. 
 Parameters such as number of epochs, batch size and optimiser can also be specifed. The network takes data in the form of numpy arrays and converst them to PyTorch tensors internally to allow for more flexibility with input data.
 
-This class contains majority of functions involving gathering raw data from the network - its weight matrix for different layers and epochs of training, as well as a way to check whether there exists a vanishing gradient problem.
+This class contains majority of functions involving gathering raw data from the network - its weight matrix for different layers and epochs of training, visualisation of decision boundary, as well as a way to check whether there exists a vanishing gradient problem.
 
 It provides implementation of FGSM and BIM algorithms for generating adversarial examples for the purposes of any experiments involving adversarial robustness.
 
